@@ -22,20 +22,18 @@
   * @return int Returns 0 upon successful execution.
   */
  int main() {
-     // Hardcoded values for log generation as per assignment requirements
-     int numServers = 10;
-     int simulationTime = 10000;
+     int numServers;
+     int simulationTime;
  
-     std::cout << "--- Simulation Configuration ---" << std::endl;
-     std::cout << "Initial number of servers: " << numServers << std::endl;
-     std::cout << "Total simulation time: " << simulationTime << " clock cycles." << std::endl;
-     std::cout << "Initial request task time range: 1 to 50 cycles." << std::endl;
-     std::cout << "Random new request task time range: 1 to 100 cycles." << std::endl;
-     std::cout << "--------------------------------\n" << std::endl;
+     std::cout << "--- Load Balancer Simulation Setup ---" << std::endl;
+     std::cout << "Enter the initial number of web servers: ";
+     std::cin >> numServers;
  
-     std::cout << "Starting simulation..." << std::endl;
+     std::cout << "Enter the total simulation time (in clock cycles): ";
+     std::cin >> simulationTime;
+     std::cout << "--------------------------------------\n" << std::endl;
  
-     // Create a LoadBalancer instance with the specified number of servers
+     // Create a LoadBalancer instance with the user-specified number of servers
      LoadBalancer myLoadBalancer(numServers); 
    
      // Run the simulation for the specified duration
