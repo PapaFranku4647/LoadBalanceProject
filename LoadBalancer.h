@@ -35,6 +35,15 @@
           * @param totalTime The total number of clock cycles to run the simulation for.
           */
          void runSimulation(int totalTime);
+ 
+         /**
+          * @brief Prints a final summary of the simulation status.
+          *
+          * This method is called after the simulation finishes to provide a final
+          * report including queue size, server status, and other metrics as
+          * required by the project rubric.
+          */
+         void printFinalStatus();
      
      private:
          /**

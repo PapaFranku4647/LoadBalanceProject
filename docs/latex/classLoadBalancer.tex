@@ -15,7 +15,9 @@ Manages a queue of web requests and a pool of web servers.
 \mbox{\hyperlink{classLoadBalancer_ab8172e9df558e0bf0e64dcb9523c2d01}{Load\+Balancer}} (int number\+Of\+Servers)
 \begin{DoxyCompactList}\small\item\em Constructs a new \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classLoadBalancer_aa1bf7e94c999b66814374ef673e7c858}{run\+Simulation}} (int total\+Time)
-\begin{DoxyCompactList}\small\item\em Runs the entire load balancing simulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Runs the entire load balancing simulation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLoadBalancer_a37cd01c1247d7c4ff91d23e01a1142bf}{print\+Final\+Status}} ()
+\begin{DoxyCompactList}\small\item\em Prints a final summary of the simulation status. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -49,7 +51,21 @@ Initializes the clock, resizes the web server pool, seeds the random number gene
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classLoadBalancer_aa1bf7e94c999b66814374ef673e7c858}\label{classLoadBalancer_aa1bf7e94c999b66814374ef673e7c858}} 
+\mbox{\Hypertarget{classLoadBalancer_a37cd01c1247d7c4ff91d23e01a1142bf}\label{classLoadBalancer_a37cd01c1247d7c4ff91d23e01a1142bf}} 
+\index{LoadBalancer@{LoadBalancer}!printFinalStatus@{printFinalStatus}}
+\index{printFinalStatus@{printFinalStatus}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{printFinalStatus()}{printFinalStatus()}}
+{\footnotesize\ttfamily void Load\+Balancer\+::print\+Final\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prints a final summary of the simulation status. 
+
+Prints the final status of the simulation.
+
+This method is called after the simulation finishes to provide a final report including queue size, server status, and other metrics as required by the project rubric.
+
+This function is called once at the end of the simulation to provide a summary that fulfills the project rubric requirements. \mbox{\Hypertarget{classLoadBalancer_aa1bf7e94c999b66814374ef673e7c858}\label{classLoadBalancer_aa1bf7e94c999b66814374ef673e7c858}} 
 \index{LoadBalancer@{LoadBalancer}!runSimulation@{runSimulation}}
 \index{runSimulation@{runSimulation}!LoadBalancer@{LoadBalancer}}
 \doxysubsubsection{\texorpdfstring{runSimulation()}{runSimulation()}}

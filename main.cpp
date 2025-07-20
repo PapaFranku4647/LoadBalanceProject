@@ -22,18 +22,18 @@
   * @return int Returns 0 upon successful execution.
   */
  int main() {
-     int numServers;
-     int simulationTime;
+     // Hardcoded values for log generation as per assignment requirements
+     int numServers = 10;
+     int simulationTime = 10000;
  
-     // Get simulation parameters from the user
-     std::cout << "Enter the number of web servers to simulate: ";
-     std::cin >> numServers;
+     std::cout << "--- Simulation Configuration ---" << std::endl;
+     std::cout << "Initial number of servers: " << numServers << std::endl;
+     std::cout << "Total simulation time: " << simulationTime << " clock cycles." << std::endl;
+     std::cout << "Initial request task time range: 1 to 50 cycles." << std::endl;
+     std::cout << "Random new request task time range: 1 to 100 cycles." << std::endl;
+     std::cout << "--------------------------------\n" << std::endl;
  
-     std::cout << "Enter the total time (in clock cycles) to run the simulation: ";
-     std::cin >> simulationTime;
- 
-     std::cout << "Starting simulation with " << numServers << " servers for "
-               << simulationTime << " clock cycles." << std::endl;
+     std::cout << "Starting simulation..." << std::endl;
  
      // Create a LoadBalancer instance with the specified number of servers
      LoadBalancer myLoadBalancer(numServers); 
@@ -41,7 +41,10 @@
      // Run the simulation for the specified duration
      myLoadBalancer.runSimulation(simulationTime);
  
-     std::cout << "Simulation finished." << std::endl;
+     std::cout << "\nSimulation finished." << std::endl;
+     
+     // Print the final status report as required by the rubric
+     myLoadBalancer.printFinalStatus();
      
      return 0;
  }

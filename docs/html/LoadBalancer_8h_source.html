@@ -80,20 +80,23 @@ $(function() {
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;         <a class="code" href="classLoadBalancer.html#ab8172e9df558e0bf0e64dcb9523c2d01">LoadBalancer</a>(<span class="keywordtype">int</span> numberOfServers);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;         <span class="keywordtype">void</span> <a class="code" href="classLoadBalancer.html#aa1bf7e94c999b66814374ef673e7c858">runSimulation</a>(<span class="keywordtype">int</span> totalTime);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;     </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;     <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;         <span class="keywordtype">void</span> generateInitialRequests(<span class="keywordtype">int</span> numServers);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;         std::queue&lt;Request&gt; requestQueue; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;         std::vector&lt;WebServer&gt; webServers; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;         <span class="keywordtype">int</span> clock;                         </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; };</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor"> #endif </span><span class="comment">// LOADBALANCER_H</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;         <span class="keywordtype">void</span> <a class="code" href="classLoadBalancer.html#a37cd01c1247d7c4ff91d23e01a1142bf">printFinalStatus</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;     </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;     <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;         <span class="keywordtype">void</span> generateInitialRequests(<span class="keywordtype">int</span> numServers);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;         std::queue&lt;Request&gt; requestQueue; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;         std::vector&lt;WebServer&gt; webServers; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;         <span class="keywordtype">int</span> clock;                         </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; };</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor"> #endif </span><span class="comment">// LOADBALANCER_H</span></div>
 <div class="ttc" id="aRequest_8h_html"><div class="ttname"><a href="Request_8h.html">Request.h</a></div><div class="ttdoc">Defines the structure for a single web request.</div></div>
 <div class="ttc" id="aWebServer_8h_html"><div class="ttname"><a href="WebServer_8h.html">WebServer.h</a></div><div class="ttdoc">Defines the WebServer class for processing requests.</div></div>
 <div class="ttc" id="aclassLoadBalancer_html"><div class="ttname"><a href="classLoadBalancer.html">LoadBalancer</a></div><div class="ttdoc">Manages a queue of web requests and a pool of web servers.</div><div class="ttdef"><b>Definition:</b> LoadBalancer.h:25</div></div>
-<div class="ttc" id="aclassLoadBalancer_html_aa1bf7e94c999b66814374ef673e7c858"><div class="ttname"><a href="classLoadBalancer.html#aa1bf7e94c999b66814374ef673e7c858">LoadBalancer::runSimulation</a></div><div class="ttdeci">void runSimulation(int totalTime)</div><div class="ttdoc">Runs the entire load balancing simulation.</div><div class="ttdef"><b>Definition:</b> LoadBalancer.cpp:74</div></div>
+<div class="ttc" id="aclassLoadBalancer_html_a37cd01c1247d7c4ff91d23e01a1142bf"><div class="ttname"><a href="classLoadBalancer.html#a37cd01c1247d7c4ff91d23e01a1142bf">LoadBalancer::printFinalStatus</a></div><div class="ttdeci">void printFinalStatus()</div><div class="ttdoc">Prints a final summary of the simulation status.</div><div class="ttdef"><b>Definition:</b> LoadBalancer.cpp:140</div></div>
+<div class="ttc" id="aclassLoadBalancer_html_aa1bf7e94c999b66814374ef673e7c858"><div class="ttname"><a href="classLoadBalancer.html#aa1bf7e94c999b66814374ef673e7c858">LoadBalancer::runSimulation</a></div><div class="ttdeci">void runSimulation(int totalTime)</div><div class="ttdoc">Runs the entire load balancing simulation.</div><div class="ttdef"><b>Definition:</b> LoadBalancer.cpp:77</div></div>
 <div class="ttc" id="aclassLoadBalancer_html_ab8172e9df558e0bf0e64dcb9523c2d01"><div class="ttname"><a href="classLoadBalancer.html#ab8172e9df558e0bf0e64dcb9523c2d01">LoadBalancer::LoadBalancer</a></div><div class="ttdeci">LoadBalancer(int numberOfServers)</div><div class="ttdoc">Constructs a new LoadBalancer object.</div><div class="ttdef"><b>Definition:</b> LoadBalancer.cpp:31</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
