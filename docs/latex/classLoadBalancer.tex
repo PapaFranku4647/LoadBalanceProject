@@ -1,0 +1,86 @@
+\hypertarget{classLoadBalancer}{}\doxysection{Load\+Balancer Class Reference}
+\label{classLoadBalancer}\index{LoadBalancer@{LoadBalancer}}
+
+
+Manages a queue of web requests and a pool of web servers.  
+
+
+
+
+{\ttfamily \#include $<$Load\+Balancer.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLoadBalancer_ab8172e9df558e0bf0e64dcb9523c2d01}{Load\+Balancer}} (int number\+Of\+Servers)
+\begin{DoxyCompactList}\small\item\em Constructs a new \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLoadBalancer_aa1bf7e94c999b66814374ef673e7c858}{run\+Simulation}} (int total\+Time)
+\begin{DoxyCompactList}\small\item\em Runs the entire load balancing simulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages a queue of web requests and a pool of web servers. 
+
+The \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} distributes incoming requests from a central queue to a dynamic pool of \mbox{\hyperlink{classWebServer}{Web\+Server}} instances. It also manages the simulation clock and dynamically scales the number of servers up or down based on load. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLoadBalancer_ab8172e9df558e0bf0e64dcb9523c2d01}\label{classLoadBalancer_ab8172e9df558e0bf0e64dcb9523c2d01}} 
+\index{LoadBalancer@{LoadBalancer}!LoadBalancer@{LoadBalancer}}
+\index{LoadBalancer@{LoadBalancer}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{LoadBalancer()}{LoadBalancer()}}
+{\footnotesize\ttfamily Load\+Balancer\+::\+Load\+Balancer (\begin{DoxyParamCaption}\item[{int}]{number\+Of\+Servers }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} object. 
+
+Constructs a new \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em number\+Of\+Servers} & The initial number of web servers to create.\\
+\hline
+\end{DoxyParams}
+Initializes the clock, resizes the web server pool, seeds the random number generator, and populates the initial request queue. 
+\begin{DoxyParams}{Parameters}
+{\em number\+Of\+Servers} & The initial number of web servers. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLoadBalancer_aa1bf7e94c999b66814374ef673e7c858}\label{classLoadBalancer_aa1bf7e94c999b66814374ef673e7c858}} 
+\index{LoadBalancer@{LoadBalancer}!runSimulation@{runSimulation}}
+\index{runSimulation@{runSimulation}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{runSimulation()}{runSimulation()}}
+{\footnotesize\ttfamily void Load\+Balancer\+::run\+Simulation (\begin{DoxyParamCaption}\item[{int}]{total\+Time }\end{DoxyParamCaption})}
+
+
+
+Runs the entire load balancing simulation. 
+
+Runs the main simulation loop for a specified duration.
+
+
+\begin{DoxyParams}{Parameters}
+{\em total\+Time} & The total number of clock cycles to run the simulation for.\\
+\hline
+\end{DoxyParams}
+This method iterates from clock cycle 0 to {\ttfamily total\+Time}. In each cycle, it\+:
+\begin{DoxyEnumerate}
+\item Potentially adds new random requests to the queue.
+\item Scales the number of web servers up or down based on queue size.
+\item Assigns requests from the queue to idle servers.
+\item Tells each server to process its current request for one cycle.
+\item Prints a status update every 100 cycles. 
+\begin{DoxyParams}{Parameters}
+{\em total\+Time} & The total number of clock cycles for the simulation. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyEnumerate}
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{LoadBalancer_8h}{Load\+Balancer.\+h}}\item 
+\mbox{\hyperlink{LoadBalancer_8cpp}{Load\+Balancer.\+cpp}}\end{DoxyCompactItemize}

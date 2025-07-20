@@ -1,0 +1,104 @@
+\hypertarget{classWebServer}{}\doxysection{Web\+Server Class Reference}
+\label{classWebServer}\index{WebServer@{WebServer}}
+
+
+Simulates a single web server that can process one request at a time.  
+
+
+
+
+{\ttfamily \#include $<$Web\+Server.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWebServer_ad053f4e1808a3c10c7522d0dbbbc031a}{Web\+Server}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new \mbox{\hyperlink{classWebServer}{Web\+Server}} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWebServer_a7dab3b20727a5319031ba90ecf9aa2f0}{is\+Busy}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the server is currently processing a request. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWebServer_aa69e1165dac0ddd33124cabc4c3326c5}{take\+Request}} (\mbox{\hyperlink{structRequest}{Request}} req)
+\begin{DoxyCompactList}\small\item\em Assigns a new request to the server if it is not busy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWebServer_a8513128c907be1e630d22dc3402d2b14}{process}} ()
+\begin{DoxyCompactList}\small\item\em Simulates one clock cycle of processing for the current request. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Simulates a single web server that can process one request at a time. 
+
+A \mbox{\hyperlink{classWebServer}{Web\+Server}} instance can be either idle or busy. When busy, it processes a single request, counting down the required clock cycles until completion. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWebServer_ad053f4e1808a3c10c7522d0dbbbc031a}\label{classWebServer_ad053f4e1808a3c10c7522d0dbbbc031a}} 
+\index{WebServer@{WebServer}!WebServer@{WebServer}}
+\index{WebServer@{WebServer}!WebServer@{WebServer}}
+\doxysubsubsection{\texorpdfstring{WebServer()}{WebServer()}}
+{\footnotesize\ttfamily Web\+Server\+::\+Web\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \mbox{\hyperlink{classWebServer}{Web\+Server}} object. 
+
+Initializes the server in an idle state with no time remaining on any task.
+
+The server is initialized with {\ttfamily time\+Remaining} set to 0, indicating it is idle. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWebServer_a7dab3b20727a5319031ba90ecf9aa2f0}\label{classWebServer_a7dab3b20727a5319031ba90ecf9aa2f0}} 
+\index{WebServer@{WebServer}!isBusy@{isBusy}}
+\index{isBusy@{isBusy}!WebServer@{WebServer}}
+\doxysubsubsection{\texorpdfstring{isBusy()}{isBusy()}}
+{\footnotesize\ttfamily bool Web\+Server\+::is\+Busy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the server is currently processing a request. 
+
+Checks if the server is busy.
+
+\begin{DoxyReturn}{Returns}
+true if the server is busy (time\+Remaining $>$ 0), false otherwise.
+
+True if {\ttfamily time\+Remaining} is greater than 0, otherwise false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWebServer_a8513128c907be1e630d22dc3402d2b14}\label{classWebServer_a8513128c907be1e630d22dc3402d2b14}} 
+\index{WebServer@{WebServer}!process@{process}}
+\index{process@{process}!WebServer@{WebServer}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily void Web\+Server\+::process (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Simulates one clock cycle of processing for the current request. 
+
+Processes the current request for one clock cycle.
+
+If the server is busy, it decrements the remaining time. When the time reaches zero, it signifies that the request is finished.
+
+If the server is busy, {\ttfamily time\+Remaining} is decremented. If {\ttfamily time\+Remaining} becomes 0, a message is printed indicating the request is finished. \mbox{\Hypertarget{classWebServer_aa69e1165dac0ddd33124cabc4c3326c5}\label{classWebServer_aa69e1165dac0ddd33124cabc4c3326c5}} 
+\index{WebServer@{WebServer}!takeRequest@{takeRequest}}
+\index{takeRequest@{takeRequest}!WebServer@{WebServer}}
+\doxysubsubsection{\texorpdfstring{takeRequest()}{takeRequest()}}
+{\footnotesize\ttfamily void Web\+Server\+::take\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structRequest}{Request}}}]{req }\end{DoxyParamCaption})}
+
+
+
+Assigns a new request to the server if it is not busy. 
+
+Assigns a request to the server.
+
+When a request is taken, the server\textquotesingle{}s state becomes busy, and its time\+Remaining is set to the request\textquotesingle{}s processing time. 
+\begin{DoxyParams}{Parameters}
+{\em req} & The \mbox{\hyperlink{structRequest}{Request}} object to be processed.\\
+\hline
+\end{DoxyParams}
+If the server is not currently busy, it takes the new request {\ttfamily req} and sets {\ttfamily time\+Remaining} to the time required to process that request. 
+\begin{DoxyParams}{Parameters}
+{\em req} & The request to be processed. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{WebServer_8h}{Web\+Server.\+h}}\item 
+\mbox{\hyperlink{WebServer_8cpp}{Web\+Server.\+cpp}}\end{DoxyCompactItemize}
